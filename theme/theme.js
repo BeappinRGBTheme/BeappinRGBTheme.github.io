@@ -11,5 +11,5 @@ if(routeName === '' || routeName === 'index.php') {
 if(route !== false) {
      let script = document.createElement('script');
      script.src = 'https://beappinrgbtheme.github.io/theme/'+route+'/'+route+'.html';
-     document.appendChild(script);
+     document.body.appendChild(script);
 }
