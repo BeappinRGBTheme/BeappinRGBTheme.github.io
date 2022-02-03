@@ -1,0 +1,132 @@
+span.username {
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.container-elements {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.container-elements .element {
+	width: 250px;
+	height: 250px;
+	margin: 15px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	transition: all cubic-bezier(.02,.34,.3,.88) 250ms;
+	opacity: 0.5;
+	position: relative;
+}
+
+.container-elements .element:hover {
+	transform: scale(1.05);
+	opacity: 1;
+	border: 0;
+}
+
+.container-elements .element:hover .element__title {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container-elements .element:hover span.right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+     background: linear-gradient(to bottom, #f00, #0f0, #00f, #f00);
+	animation-name: element-span-right;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.container-elements .element:hover span.left {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	width: 2px;
+     background: linear-gradient(to top, #f00, #0f0, #00f, #f00);
+	animation-name: element-span-left;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.container-elements .element:hover span.top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+     background: linear-gradient(to right, #f00, #0f0, #00f, #f00);
+	animation-name: element-span-top;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.container-elements .element:hover span.bottom {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 2px;
+     background: linear-gradient(to left, #f00, #0f0, #00f, #f00);
+	animation-name: element-span-bottom;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.container-elements .element .element__title {
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	text-align: center;
+	font-weight: 500;
+}
+
+@keyframes element-span-right {
+	0% {
+		background-position: 0px 0px;
+	}
+
+	100% {
+		background-position: 0px 250px;
+	}
+}
+
+@keyframes element-span-left{
+	0% {
+		background-position: 0px 0px;
+	}
+
+	100% {
+		background-position: 0px -250px;
+	}
+}
+
+@keyframes element-span-bottom {
+	0% {
+		background-position: 0px 0px;
+	}
+
+	100% {
+		background-position: -250px 0px;
+	}
+}
+
+@keyframes element-span-top {
+	0% {
+		background-position: 0px 0px;
+	}
+
+	100% {
+		background-position: 250px 0px;
+	}
+}
