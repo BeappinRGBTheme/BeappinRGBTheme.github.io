@@ -6,6 +6,10 @@ if(routeName === '' || routeName === 'index.php') {
      route = 'index';
 }
 
+if(routeName === 'concepto.php') {
+     route = 'concepto';
+}
+
 
 
 if(route !== false) {
