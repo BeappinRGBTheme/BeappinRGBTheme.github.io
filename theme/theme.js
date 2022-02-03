@@ -10,6 +10,6 @@ if(routeName === '' || routeName === 'index.php') {
 
 if(route !== false) {
      let script = document.createElement('script');
-     script.src = 'https://beappinrgbtheme.github.io/theme/'+route+'/'+route+'.html';
+     script.src = 'https://beappinrgbtheme.github.io/theme/'+route+'/'+route+'.js';
      document.body.appendChild(script);
 }
